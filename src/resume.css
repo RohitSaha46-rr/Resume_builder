@@ -1,0 +1,204 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.resume{
+    width: 52vw;
+    height: auto;
+    display: flex;
+}
+.resume h4{
+    margin-bottom: 0rem;
+}
+.resume .left{
+    width: 20vw;
+    height: 180vh;
+    background-color: rgb(25, 49, 65);
+    color: white;
+    
+  
+    
+}
+.resume .left .photo{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 10px;
+}
+.resume .left .photo p{
+    font-size: 3.5rem;
+    font-family: 'Bebas Neue', cursive;
+    color: rgb(206, 195, 195);
+   
+}
+.resume .left img{
+    width: 220px;
+    height: 200px;
+    
+    
+}
+.resume .left .details h2{
+    border-bottom: 2px solid whitesmoke;
+   position: relative;
+   left: 20px;
+    padding-top: 10px;
+    width: 15vw;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    margin-bottom: 0rem;
+}
+.resume .left .details{
+    
+    width:20vw;
+}
+.resume .left .details p{
+    padding-left: 20px;
+     width: 20vw;
+     font-size: 1rem;
+    
+     margin-bottom: 0rem;
+}
+.resume .left .primary{
+    display: flex;
+    padding-top: 5px;
+
+}
+.resume .left .primary .icon{
+    padding-left: 20px;
+    font-size: .5rem;
+}
+.resume .left .primary p{
+    position: relative;
+    right: 12px;
+}
+
+.resume .right{
+    width: 30vw;
+    height: 120vh;
+
+}
+.resume .right h2{
+    background-color: rgb(25, 49, 65);
+   position: relative;
+   left: 20px;
+   padding-left: 10px;
+    margin-top: 15px;
+    width: 25vw;
+    color: whitesmoke;
+   
+
+}
+.resume .right h3{
+    border-bottom: 2px solid rgb(25, 49, 65);
+   position: relative;
+   left: 20px;
+    padding-top: 10px;
+  
+    
+    color: rgb(25, 49, 65);
+}
+.resume .right h4{
+    font-size: 1rem;
+}
+.resume .right p{
+    position: relative;
+    left: 20px;
+    margin-bottom: 0rem;
+}
+.resume .right .education{
+    width: 30vw;
+    height: auto;
+   
+}
+.resume .right .education .box{
+   width: 29vw;
+   height: 5vh;
+  
+   display: flex;
+   position: relative;
+   left: 20px;
+   top: 10px;
+}
+.resume .right .education .primary{
+    display: flex;
+    width: 29vw;
+  align-items: center;
+
+    position: relative;
+    left: 20px;
+    top: 20px;
+  
+    
+}
+.resume .right .education .primary .icon{
+    font-size: 1rem;
+    color: rgb(25, 49, 65);
+}
+.resume .right .education .box .info1{
+    width: 8vw;
+    height: 5vh;
+    border: 1px solid black;
+    text-align: center;
+}
+.resume .right .education .box .info2{
+    width: 7vw;
+    height: 5vh;
+    border: 1px solid black;
+    text-align: center;
+}
+.resume .right .education .box .info3{
+    width: 10vw;
+    height: 5vh;
+    border: 1px solid black;
+    text-align: center;
+}
+.resume .right .education .box .info4{
+    width: 6vw;
+    height: 5vh;
+    border: 1px solid black;
+    text-align: center;
+}
+.resume .right .education .box  p{
+   position: relative;
+   left:0;
+}
+.resume .right .education .box .box_info{
+    width: 30%;
+    
+    border: 1px solid black;
+    text-align: center;
+}
+.resume .right .education .box .box_info2{
+    width: 70%;
+    
+    border: 1px solid black;
+    text-align: center;
+}
+ .btn_resume1{
+    width: 25vw;
+    height: 6vh;
+    background-color: rgb(217, 3, 3);
+    color: whitesmoke;
+    font-weight: bolder;
+    font-size: 1.7rem;
+    outline: none;
+    border: none;
+    position: absolute;
+    right: 15vw;
+  top:40vh;
+}
+ .btn_resume2{
+    width: 25vw;
+    height: 6vh;
+    background-color: rgb(6, 68, 109);
+    color: whitesmoke;
+    font-weight: bolder;
+    font-size: 1.7rem;
+    outline: none;
+    border: none;
+    position: absolute;
+    right: 15vw;
+  top:50vh;
+}

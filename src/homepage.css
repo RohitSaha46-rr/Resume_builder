@@ -1,0 +1,47 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.home_page{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(https://img.freepik.com/free-vector/white-polygon-geometric-seamless-futuristic-technology-design-background-texture-vector_33869-2456.jpg);
+   background-size: 100% 100%;
+   display: grid;
+   place-items: center;
+}
+.home_page .content{
+    width: 70vw;
+    height: 70vh;
+    font-family: 'Roboto Condensed', sans-serif;
+    
+   
+}
+.home_page .content h1{
+    font-size: 4rem;
+    color: rgb(4, 22, 144);
+    font-weight: bolder;
+}
+.home_page .content p{
+    font-size: 2.5rem;
+}
+.home_page .content h3{
+    font-size: 4rem;
+    color: red;
+}
+.home_page .btn_1{
+    width: 25vw;
+    height: 8vh;
+    background-color: rgb(4, 22, 144);
+    color: whitesmoke;
+    font-weight: bolder;
+    font-size: 2.1rem;
+    border: none;
+    outline: none;
+   border-top-left-radius: 30px;
+   border-bottom-left-radius: 30px;
+   border-bottom-right-radius: 30px;
+   border-top-right-radius: 30px;
+  
+}

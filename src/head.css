@@ -1,0 +1,10 @@
+ .head{
+    width: 100vw;
+    height: 17vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(6, 68, 109);
+    
+}
