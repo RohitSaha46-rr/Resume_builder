@@ -4,6 +4,7 @@ import {useLocation} from 'react-router-dom';
 import './education.css';
 import Head from './Head';
 const Education = () => {
+  let data=JSON.parse(localStorage.getItem('education'));
   const inp=useRef(null);
   const inp1=useRef(null);
   const inp2=useRef(null);
@@ -45,30 +46,30 @@ const Education = () => {
   const[intial_pyear4,up_pyear4]=useState(0);
   const[intial_stream4,up_stream4]=useState(0);
   const[userinfo,setinfo]=useState({
-    clg_name:"",
-    board:"",
-    qual:"",
-    per:"",
-    pyear:"",
-    stream:"",
-    clg_name2:"",
-    board2:"",
-    qual2:"",
-    per2:"",
-    pyear2:"",
-    stream2:"",
-    schl_name3:"",
-    board3:"",
-    qual3:"",
-    per3:"",
-    pyear3:"",
-    stream3:"",
-    schl_name4:"",
-    board4:"",
-    qual4:"",
-    per4:"",
-    pyear4:"",
-    stream4:"",
+    clg_name:data.clg_name,
+    board:data.board,
+    qual:data.qual,
+    per:data.per,
+    pyear:data.pyear,
+    stream:data.stream,
+    clg_name2:data.clg_name2,
+    board2:data.board2,
+    qual2:data.qual2,
+    per2:data.per2,
+    pyear2:data.pyear2,
+    stream2:data.stream2,
+    schl_name3:data.schl_name3,
+    board3:data.board3,
+    qual3:data.qual3,
+    per3:data.per3,
+    pyear3:data.pyear3,
+    stream3:data.stream3,
+    schl_name4:data.schl_name4,
+    board4:data.board4,
+    qual4:data.qual4,
+    per4:data.per4,
+    pyear4:data.pyear4,
+    stream4:data.stream4,
   })
   let name,value;
   const onchange1=(e)=>{
@@ -112,7 +113,7 @@ const previous=()=>{
   navigator("/personal_details");
 }
 
-
+localStorage.setItem('education',JSON.stringify(userinfo));
   return (
     <div className='education'>
     <Head title="Let's now dig into your qualification skills!"></Head>

@@ -1,8 +1,11 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Head from './Head'
 import './experience.css';
 import {Link, useLocation, useNavigate} from 'react-router-dom';
+
+//console.log(DATA);
 const Experience = () => {
+  let data = JSON.parse(localStorage.getItem('list_experience'));
   const inp1=useRef(null);
   const inp2=useRef(null);
   const inp3=useRef(null);
@@ -18,14 +21,17 @@ const Experience = () => {
   const[initial_intern2,up_intern2]=useState(0);
   const[initial_intern3,up_intern3]=useState(0);
   const[userinfo,setinfo]=useState({
-    objective:"",
-    exp1:"",
-    exp2:"",
-    exp3:"",
-    internship1:"",
-    internship2:"",
-    internship3:"",
+    objective:data.objective,
+    exp1:data.exp1,
+    exp2:data.exp2,
+    exp3:data.exp3,
+    internship1:data.internship1,
+    internship2:data.internship2,
+    internship3:data.internship3,
   })
+
+localStorage.setItem('list_experience',JSON.stringify(userinfo));
+
   let name,value;
   const onchange1=(e)=>{
     name=e.target.name;

@@ -4,6 +4,7 @@ import Head from './Head';
 import './personal_details.css';
 
 const Personal_details = () => {
+  let DATA = JSON.parse(localStorage.getItem('list'));
   const inp=useRef(null);
   const inp1=useRef(null);
   const inp2=useRef(null);
@@ -12,14 +13,14 @@ const Personal_details = () => {
   const[initial_prof,updated_ini_prof]=useState(0);
   const[image,updated_image]=useState("https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png");
  const[userinfo,setinfo]=useState({
-   user_name:"",
-   email:"",
-   contact:"",
-   address:"",
-   post:"",
-   dist:"",
-   profession:"",
-   pin:""
+   user_name:DATA.user_name,
+   email:DATA.email,
+   contact:DATA.contact,
+   address:DATA.address,
+   post:DATA.post,
+   dist:DATA.dist,
+   profession:DATA.profession,
+   pin:DATA.pin
  })
  let name,value;
  
@@ -50,6 +51,7 @@ navigate("/education",{ state: { username:userinfo.user_name,email:userinfo.emai
 
     
   }
+  localStorage.setItem('list',JSON.stringify(userinfo));
   return (
     <div className='Personal_details'>
     <Head title="Let's generate your Resume!"

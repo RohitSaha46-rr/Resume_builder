@@ -3,6 +3,7 @@ import Head from './Head'
 import './skills.css';
 import {Link, useNavigate,useLocation} from 'react-router-dom';
 const Skills = () => {
+  let data=JSON.parse(localStorage.getItem('skills'));
   const inp1=useRef(null);
   const inp2=useRef(null);
   const inp3=useRef(null);
@@ -17,12 +18,12 @@ const Skills = () => {
   const[lang2,up_lang2]=useState(0);
   const[lang3,up_lang3]=useState(0);
   const[userinfo,setinfo]=useState({
-    skill1:"",
-    skill2:"",
-    skill3:"",
-    lang1:"",
-    lang2:"",
-    lang3:"",
+    skill1:data.skill1,
+    skill2:data.skill2,
+    skill3:data.skill3,
+    lang1:data.lang1,
+    lang2:data.lang2,
+    lang3:data.lang3,
   })
   let name,value;
   const onchange1=(e)=>{
@@ -49,7 +50,7 @@ const fun=()=>{
 const previous=()=>{
   navigator("/education",{state:{username,email,contact,address,post,dist,profession,pin,image}});
 }
-
+localStorage.setItem('skills',JSON.stringify(userinfo));
   return (
     <div className='skills'>
         <Head title="Let's see what skills you have learned!"></Head>
