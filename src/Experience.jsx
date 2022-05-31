@@ -5,7 +5,56 @@ import {Link, useLocation, useNavigate} from 'react-router-dom';
 
 //console.log(DATA);
 const Experience = () => {
-  let data = JSON.parse(localStorage.getItem('list_experience'));
+  const fun1=()=>{
+    let data = JSON.parse(localStorage.getItem('list_experience'));
+    if(data)
+      return data.objective
+    else
+      return ""
+  }
+  const fun2=()=>{
+    let data = JSON.parse(localStorage.getItem('list_experience'));
+    if(data)
+      return data.exp1
+    else
+      return ""
+  }
+  const fun3=()=>{
+    let data = JSON.parse(localStorage.getItem('list_experience'));
+    if(data)
+      return data.exp2
+    else
+      return ""
+  }
+  const fun4=()=>{
+    let data = JSON.parse(localStorage.getItem('list_experience'));
+    if(data)
+      return data.exp3
+    else
+      return ""
+  }
+  const fun5=()=>{
+    let data = JSON.parse(localStorage.getItem('list_experience'));
+    if(data)
+      return data.internship1
+    else
+      return ""
+  }
+  const fun6=()=>{
+    let data = JSON.parse(localStorage.getItem('list_experience'));
+    if(data)
+      return data.internship2
+    else
+      return ""
+  }
+  const fun7=()=>{
+    let data = JSON.parse(localStorage.getItem('list_experience'));
+    if(data)
+      return data.internship3
+    else
+      return ""
+  }
+  
   const inp1=useRef(null);
   const inp2=useRef(null);
   const inp3=useRef(null);
@@ -21,16 +70,18 @@ const Experience = () => {
   const[initial_intern2,up_intern2]=useState(0);
   const[initial_intern3,up_intern3]=useState(0);
   const[userinfo,setinfo]=useState({
-    objective:data.objective,
-    exp1:data.exp1,
-    exp2:data.exp2,
-    exp3:data.exp3,
-    internship1:data.internship1,
-    internship2:data.internship2,
-    internship3:data.internship3,
+    objective:fun1(),
+    exp1:fun2(),
+    exp2:fun3(),
+    exp3:fun4(),
+    internship1:fun5(),
+    internship2:fun6(),
+    internship3:fun7(),
   })
+useEffect(()=>{
+  localStorage.setItem('list_experience',JSON.stringify(userinfo));},[userinfo]
+);
 
-localStorage.setItem('list_experience',JSON.stringify(userinfo));
 
   let name,value;
   const onchange1=(e)=>{

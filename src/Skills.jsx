@@ -1,9 +1,63 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Head from './Head'
 import './skills.css';
 import {Link, useNavigate,useLocation} from 'react-router-dom';
 const Skills = () => {
-  let data=JSON.parse(localStorage.getItem('skills'));
+  
+  const fun1=()=>{
+    let data=JSON.parse(localStorage.getItem('skills'));
+    if(data){
+      return data.skill1;
+    }
+    else{
+      return ""
+    }
+  }
+  const fun2=()=>{
+    let data=JSON.parse(localStorage.getItem('skills'));
+    if(data){
+      return data.skill2;
+    }
+    else{
+      return ""
+    }
+  }
+  const fun3=()=>{
+    let data=JSON.parse(localStorage.getItem('skills'));
+    if(data){
+      return data.skill3;
+    }
+    else{
+      return ""
+    }
+  }
+  const fun4=()=>{
+    let data=JSON.parse(localStorage.getItem('skills'));
+    if(data){
+      return data.lang1;
+    }
+    else{
+      return ""
+    }
+  }
+  const fun5=()=>{
+    let data=JSON.parse(localStorage.getItem('skills'));
+    if(data){
+      return data.lang2;
+    }
+    else{
+      return ""
+    }
+  }
+  const fun6=()=>{
+    let data=JSON.parse(localStorage.getItem('skills'));
+    if(data){
+      return data.lang3;
+    }
+    else{
+      return ""
+    }
+  }
   const inp1=useRef(null);
   const inp2=useRef(null);
   const inp3=useRef(null);
@@ -18,12 +72,12 @@ const Skills = () => {
   const[lang2,up_lang2]=useState(0);
   const[lang3,up_lang3]=useState(0);
   const[userinfo,setinfo]=useState({
-    skill1:data.skill1,
-    skill2:data.skill2,
-    skill3:data.skill3,
-    lang1:data.lang1,
-    lang2:data.lang2,
-    lang3:data.lang3,
+    skill1:fun1(),
+    skill2:fun2(),
+    skill3:fun3(),
+    lang1:fun4(),
+    lang2:fun5(),
+    lang3:fun6(),
   })
   let name,value;
   const onchange1=(e)=>{
@@ -50,7 +104,10 @@ const fun=()=>{
 const previous=()=>{
   navigator("/education",{state:{username,email,contact,address,post,dist,profession,pin,image}});
 }
-localStorage.setItem('skills',JSON.stringify(userinfo));
+useEffect(()=>{
+  localStorage.setItem('skills',JSON.stringify(userinfo));
+},[userinfo]);
+
   return (
     <div className='skills'>
         <Head title="Let's see what skills you have learned!"></Head>

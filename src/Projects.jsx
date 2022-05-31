@@ -1,9 +1,80 @@
-import React, {  useRef, useState } from 'react'
+import React, {  useEffect, useRef, useState } from 'react'
 import Head from './Head'
 import './project.css';
 import {Link, useLocation, useNavigate} from 'react-router-dom';
 const Projects = () => {
-  let data = JSON.parse(localStorage.getItem('projects'));
+  const fun1=()=>{
+    let data = JSON.parse(localStorage.getItem('projects'));
+    if(data){
+      return data.project_name
+    }
+    else
+      return ""
+  }
+  const fun2=()=>{
+    let data = JSON.parse(localStorage.getItem('projects'));
+    if(data){
+      return data.desc
+    }
+    else
+      return ""
+  }
+  const fun3=()=>{
+    let data = JSON.parse(localStorage.getItem('projects'));
+    if(data){
+      return data.code_link
+    }
+    else
+      return ""
+  }
+  const fun4=()=>{
+    let data = JSON.parse(localStorage.getItem('projects'));
+    if(data){
+      return data.project_name2
+    }
+    else
+      return ""
+  }
+  const fun5=()=>{
+    let data = JSON.parse(localStorage.getItem('projects'));
+    if(data){
+      return data.desc2
+    }
+    else
+      return ""
+  }
+  const fun6=()=>{
+    let data = JSON.parse(localStorage.getItem('projects'));
+    if(data){
+      return data.code_link2
+    }
+    else
+      return ""
+  }
+  const fun7=()=>{
+    let data = JSON.parse(localStorage.getItem('projects'));
+    if(data){
+      return data.project_name3
+    }
+    else
+      return ""
+  }
+  const fun8=()=>{
+    let data = JSON.parse(localStorage.getItem('projects'));
+    if(data){
+      return data.desc3
+    }
+    else
+      return ""
+  }
+  const fun9=()=>{
+    let data = JSON.parse(localStorage.getItem('projects'));
+    if(data){
+      return data.code_link3
+    }
+    else
+      return ""
+  }
   const inp1=useRef(null);
   const inp2=useRef(null);
   const inp3=useRef(null);
@@ -29,15 +100,15 @@ const{username,email,contact,address,post,dist,profession,pin,image,
   objective,exp1,exp2,exp3,internship1,internship2,internship3
 }=location.state;
   const[fullinfo,setinfo]=useState({
-    project_name:data.project_name,
-    desc:data.desc,
-    code_link:data.code_link,
-    project_name2:data.project_name2,
-    desc2:data.desc2,
-    code_link2:data.code_link2,
-    project_name3:data.project_name3,
-    desc3:data.desc3,
-    code_link3:data.code_link3,
+    project_name:fun1(),
+    desc:fun2(),
+    code_link:fun3(),
+    project_name2:fun4(),
+    desc2:fun5(),
+    code_link2:fun6(),
+    project_name3:fun7(),
+    desc3:fun8(),
+    code_link3:fun9(),
   })
   let name,value;
   const onchange=(e)=>{
@@ -69,7 +140,10 @@ const{username,email,contact,address,post,dist,profession,pin,image,
         clg_name,board,qual,per,pyear,stream,clg_name2,board2,qual2,per2,pyear2,stream2,schl_name3,board3,qual3,per3,pyear3,stream3,schl_name4,board4,qual4,per4,pyear4,stream4,
         skill1,skill2,skill3,lang1,lang2,lang3,}});
     }
-    localStorage.setItem('projects',JSON.stringify(fullinfo));
+    useEffect(()=>{localStorage.setItem('projects',JSON.stringify(fullinfo));},
+    [fullinfo]
+    );
+
   return (
     <div className='project'>
         <Head title="Give your top 3 projects"></Head>

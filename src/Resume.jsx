@@ -86,6 +86,7 @@ const Resume = () => {
     skill1,skill2,skill3,lang1,lang2,lang3,
     objective,exp1,exp2,exp3,internship1,internship2,internship3,
     project_name,desc,code_link,project_name2,desc2,code_link2,project_name3,desc3,code_link3,}=location.state;
+    console.log(qual);
   const previous=()=>{
     navigator("/projects",{state:{username,email,contact,address,post,dist,profession,pin,image,
       clg_name,board,qual,per,pyear,stream,clg_name2,board2,qual2,per2,pyear2,stream2,schl_name3,board3,qual3,per3,pyear3,stream3,schl_name4,board4,qual4,per4,pyear4,stream4,
